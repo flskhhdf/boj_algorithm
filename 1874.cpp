@@ -23,7 +23,6 @@ int main(){
 			v.push_back('-');
 		}
 		else check = 0;
-		
 	}
 
 	if(check) for(int i = 0; i<v.size(); i++) cout << v[i] << '\n';

@@ -17,8 +17,7 @@ int main(){
         if(point>n){
             point -= n;
         }
-
-        
+		        
         if(arr[point] == 0){
             cnt++;
         }
