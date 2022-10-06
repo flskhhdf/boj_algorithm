@@ -18,14 +18,10 @@ int main(){
 		cin >> n >> m;
 
 		int arr[n];
-		pair<int, int> p[n];
-		
 		for(int i = 0; i<n; i++){
 			cin >> prio;
 			arr[i] = prio;
-			p[i].first = prio;
-			p[i].second = i;
-			q.push({p[i].first,p[i].second});
+			q.push({prio,i});
 		}
 
 		sort(arr, arr + n, comp);
@@ -34,9 +30,8 @@ int main(){
 		for (int i = 0; i < n;) {
 			tmp = q.front();
 			if (arr[i] != tmp.first) {
-				pair<int, int> cur = q.front();
 				q.pop();
-				q.push(cur);
+				q.push(tmp);
 			} else {
 				cnt++;
 				if (tmp.second == m) break;
