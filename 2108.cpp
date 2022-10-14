@@ -35,7 +35,6 @@ int main(){
 		}
 	}
 
-
     cen = num[(n-1)/2];
     mode = flag-4000;
     range = num[n-1] - num[0];
