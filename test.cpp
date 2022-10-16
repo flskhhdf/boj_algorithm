@@ -1,8 +1,18 @@
 #include "iostream"
 using namespace std;
 
-int main(){
-	bool n = 0;
-	if(n) cout << "check";
-	else cout << "non";
+int& funcTow(int var){
+	var++;
+	int *tmp = &var;
+	return *tmp;
 }
+
+int main(){
+
+	int n = 10;
+	int ref = funcTow(n);
+
+	cout << ref;
+}
+
+

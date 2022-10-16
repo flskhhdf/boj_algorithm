@@ -20,6 +20,7 @@ int main(){
 		else if (sum < s){
 			sum += v[++end]; 
 		}
+		cout << start << ' ' << end << ' ' << sum <<  '\n';
 	}
 	if(!ans) cout << 0;
 	else cout << min;
