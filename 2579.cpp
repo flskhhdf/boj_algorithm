@@ -11,9 +11,12 @@ int main(){
 	dp[0] = stair[0];
 	dp[1] = stair[0] + stair[1];
 	dp[2] = max(stair[0]+stair[2],stair[1]+stair[2]);
-
+	for(int i = 0; i<3; i++){
+		cout << dp[i] << '\n';
+	}
 	for(int i = 3; i<n; i++){
 		dp[i] = max(dp[i-2]+stair[i],dp[i-3]+stair[i]+stair[i-1]);
+		cout << dp[i] << '\n';
 	}
 	cout << dp[n-1];
 }

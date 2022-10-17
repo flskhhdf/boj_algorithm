@@ -12,6 +12,7 @@ int n,cnt=0;
 int main(){
     
 	cin >> n;
+	
 	if(n == 1) {cout << 0; return 0;}
 	
     for(int i = 2; i<=sqrtlimit; i++){

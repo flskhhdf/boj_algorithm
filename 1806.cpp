@@ -1,27 +1,41 @@
 #include "iostream"
-#include <vector>
 using namespace std;
 
-int main(){
-	int n,s,input,start=0,end=0,sum,min=2147483647,ans=0;
-	vector<int> v;
-	cin >> n >> s;
-	for(int i = 0; i<n; i++){
-		cin >> input;
-		v.push_back(input);
-	}
-	sum = v[0];
-	while(start < n && end < n){
-		if(sum >= s){
-			ans = end-start+1;
-			if(ans < min) min = ans;
-			sum -= v[start++];
-		}
-		else if (sum < s){
-			sum += v[++end]; 
-		}
-		cout << start << ' ' << end << ' ' << sum <<  '\n';
-	}
-	if(!ans) cout << 0;
-	else cout << min;
+class Car {
+private:       
+    int speed;	
+    int gear;	
+    string color;	
+public:
+    int getSpeed();
+    void setSpeed(int s);
+    void setSpeed(double s);
+};
+
+int Car::getSpeed() {
+    return speed;
 }
+
+void Car::setSpeed(int s) {	
+    speed = s;
+}
+
+void Car::setSpeed(double s) {	
+    speed = (int)s;
+}
+
+int square(int i) {
+	return i*i;
+}
+
+int main()
+{
+   Car myCar;
+   myCar.setSpeed(80);
+   myCar.setSpeed(100.0);
+   cout << "차 속도: " << myCar.getSpeed() << endl;
+   cout << square(10);
+   return 0;
+}
+
+
