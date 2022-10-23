@@ -1,18 +1,23 @@
 #include "iostream"
 using namespace std;
 
-int& funcTow(int var){
-	var++;
-	int *tmp = &var;
-	return *tmp;
-}
-
 int main(){
+	for(int i = 0; i<n; i++){
+		for(int j = 0; j<n; j++){
+			cout << i;
+		}
+		cout << '\n';
+	}
 
-	int n = 10;
-	int ref = funcTow(n);
-
-	cout << ref;
+	cout << '\n';
+	
+	for(int i = 0; i<n; i++){
+		for(int j = 0; j<n; j++){
+			cout << j;
+		}
+		cout << '\n';
+	}
+	cout << '\n';
 }
 
 

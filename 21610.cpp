@@ -37,7 +37,7 @@ void makeCloud(){
 	for(int i = 0; i<n; i++){
 		for(int j = 0; j<n; j++){
 			if(map[i][j] >= 2) {
-				cloud.push_back({i,j}); 
+				cloud.push_back({i,j});
 				map[i][j] -= 2;
 				for(int k = 0; k<v.size(); k++){
 					if(i == v[k].first && j == v[k].second) {map[i][j]+=2; cloud.pop_back();}
@@ -45,6 +45,9 @@ void makeCloud(){
 			}
 		}
 	}
+
+
+
 }
 
 void cloudmove(int a, int b) {

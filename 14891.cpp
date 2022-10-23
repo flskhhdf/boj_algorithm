@@ -42,8 +42,6 @@ void Rotation(){
 }
 
 int main(){
-	int o;
-	cin >> o;
 	char input;
 	for(int i = 1; i<5; i++){
 		for(int j = 0; j<8; j++){
@@ -65,7 +63,8 @@ int main(){
 	int ans=0;
 
 	for(int i = 1; i<5; i++){
-		if(wheel[i][0] == 1) ans++; 
+		if(wheel[i][0] == 1) ans += pow(2,i-1); 
 	}
+	
 	cout << ans;
 }
