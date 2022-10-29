@@ -16,11 +16,9 @@ int main(){
 		}
 	}
 	for(int k = 1; k<min; k++){
-		// printf("%d X %d\n", k + 1, k + 1);
 		for(int i = 0; i<n-k; i++){		
 			for(int j = 0; j<m-k; j++){
 				if(squ[i][j] == squ[i][j+k] && squ[i][j] == squ[i+k][j] && squ[i][j] == squ[i+k][j+k]){
-					// printf("(%d, %d), (%d, %d), (%d, %d), (%d, %d)\n", i, j, i, j + k, i + k, j, i + k, j + k);
 					ans = (k+1)*(k+1);
 					if(ans > max) max = ans;
 				}
