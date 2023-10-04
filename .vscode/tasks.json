@@ -3,7 +3,9 @@
     "runner": "terminal",
     "type": "shell",
     "echoCommand": true,
-    "presentation" : { "reveal": "always" },
+    "presentation": {
+        "reveal": "always"
+    },
     "tasks": [
         {
             "label": "save and compile for C++",
@@ -66,4 +68,4 @@
             "group": "test"
         },
     ]
- }
+}
