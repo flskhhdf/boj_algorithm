@@ -10,6 +10,7 @@ bool visit[101][101];
 int offset[4][2] = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 int cnt = 1;
 int ans = 2147483647;
+
 vector<pair<int, pair<int,int>>> v;
 
 void BFS(int y, int x){
